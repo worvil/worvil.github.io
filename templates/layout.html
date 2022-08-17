@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>DigiJABS</title>
+    <link rel="icon" href="C:\Users\Usuario\Desktop\python\imagenes\logo.png">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    
+  </head>
+  <body>
+
+    
+    <meta charset="UTF-8">
+		<title>Menu De Navegacion Con Listas</title>
+		<link rel="stylesheet" type="text/css" href="estilo.css">
+    
+		<ul class="menu">
+      <li><a class="navbar-brand" href="{{ url_for('home', filename='templates/home.html') }}">Cursos Digitales JABS</a>
+      <li><a href="{{ url_for('home') }}" style="text-decoration:none">Inicio</a></li>
+      <li><a href="{{ url_for('about') }}" style="text-decoration:none">Acerca De</a></li>
+		</ul>
+  
+   
+    <div class="container p-4">
+      {% block content %}
+      {% endblock%}
+    </div>
+    
+
+
+    
+    <script src="{{url_for('static', filename='js/main.js')}}"></script>
+
+   
+
+  </body>
+</html>
